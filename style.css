@@ -1,0 +1,268 @@
+:root {
+    --logo-font: 'Monoton';
+    --web-font: 'Roboto';
+    --red: #DE3C4B;
+    --dark-purple: #240115;
+    --blue: #1DA1F2;
+    --dark-purple2: #2F131E;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--web-font);
+}
+
+header {
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(2, 2, 2, 0.384);
+    z-index: 10;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+header button {
+    background-color: var(--white);
+    color: var(--dark-purple);
+    font-weight: bolder;
+    font-size: 14px;
+    transition: .3s;
+}
+
+header button:hover {
+    color: var(--white);
+    font-size: 15px;
+    background-color: var(--red);
+}
+
+.logo-cont {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-cont h1 {
+    font-family: var(--logo-font);
+    font-size: 48px;
+    font-weight: lighter;
+    color: var(--dark-purple2);
+}
+
+.logo-cont img {
+    width: 100px;
+}
+
+header .btn-cont button {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+header .btn-cont button::before {
+    content: '+';
+    padding: 5px;
+}
+
+main {
+    background: var(--white);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 30px;
+    padding: 30px;
+    height: 100%;
+}
+
+.book {
+    background-color: #F5F8FA;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px 0px rgba(2, 2, 2, 0.384);
+    min-height: 200px;
+}
+
+.book h2 {
+    text-transform: capitalize;
+    color: var(--dark-purple2);
+    font-size: 22px;
+}
+
+.book p:first-of-type {
+    text-transform: capitalize;
+    font-size: 17px;
+}
+
+.book p:last-of-type {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.book p:last-of-type::after {
+    content: ' pages';
+}
+
+.read-btn {
+    width: 60px;
+    height: 20px;
+    background-color: var(--white);
+    border-radius: 30px;
+    position: relative;
+    left: 50;
+    transition: 1s all;
+    outline: 1px solid var(--blue);
+    cursor: pointer;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--dark-purple2);
+    position: absolute;
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 15px;
+    background: none;
+    padding: 5px;
+    font-weight: 100;
+    transition: .2s all;
+}
+
+.delete-btn:hover {
+    animation: rotate;
+    -webkit-animation: 'rotate';
+    animation-duration: .6s;
+}
+
+#modal {
+    position: absolute;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.308);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-modal {
+    position: relative;
+    top: 25px;
+    left: 179px;
+    background: none;
+    font-size: 15px;
+}
+
+#close-modal:hover {
+    animation: rotate;
+    -webkit-animation: 'rotate';
+    animation-duration: .6s;
+}
+
+form {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+form div.txt {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+form div.box {
+    display: flex;
+    gap: 10px;
+}
+
+form div.box input {
+    width: 15px;
+}
+
+form div input {
+    border: none;
+    background-color: #e4e2e2;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+form button {
+    width: 50%;
+    align-self: center;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+form button:hover {
+    width: 70%;
+    font-size: 15px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(30deg);
+    }
+    40% {
+        transform: rotate(-30deg);
+    }
+    60% {
+        transform: rotate(30deg);
+    }
+    80%{
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

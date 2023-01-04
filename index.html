@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+    <div id="modal">
+        <button id="close-modal">X</button>
+        <form name="book-info">
+            <div class="txt">
+                <label for="">Book's Name</label>
+                <input required name="title" type="text">
+            </div>
+            <div class="txt">
+                <label for="">Book's Author</label>
+                <input required name="author" type="text">
+            </div>
+            <div class="txt">
+                <label for="">Book's Pages</label>
+                <input required name="pages" type="number">
+            </div>
+            <div class="box">
+                <label for="read">Already read?</label>
+                <input type="checkbox" name="read">
+            </div>
+            <button id="submit-book" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <header>
+        <div class="logo-cont">
+            <img src="./resources/logo.png" alt="logo">
+            <h1>Library</h1>
+        </div>
+        <div class="btn-cont">
+            <button id="addBook">New Book</button>
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
